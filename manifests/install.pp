@@ -210,8 +210,11 @@ class telegraf::install {
     'FreeBSD': {
       # repo is not applicable to windows
     }
+    'Archlinux': {
+      # telegraf is available in aur repo
+    }
     default: {
-      fail('Only RedHat, CentOS, OracleLinux, Debian, Ubuntu, Darwin, FreeBSD and Windows repositories and Suse archives are supported at this time')
+      fail('Only RedHat, CentOS, OracleLinux, Debian, Ubuntu, Darwin, FreeBSD, Archlinux and Windows repositories and Suse archives are supported at this time')
     }
   }
 

@@ -84,6 +84,22 @@ class telegraf::params {
       $service_hasstatus    = true
       $service_restart      = 'pkill -HUP telegraf'
     }
+    'Archlinux': {
+      $config_file          = '/etc/telegraf/telegraf.conf'
+      $config_file_owner    = 'telegraf'
+      $config_file_group    = 'telegraf'
+      $config_file_mode     = '0640'
+      $config_folder        = '/etc/telegraf/telegraf.d'
+      $config_folder_mode   = '0770'
+      $logfile              = ''
+      $manage_repo          = false
+      $manage_archive       = false
+      $manage_user          = false
+      $service_enable       = true
+      $service_ensure       = running
+      $service_hasstatus    = true
+      $service_restart      = 'pkill -HUP telegraf'
+    }
     default: {
       $config_file          = '/etc/telegraf/telegraf.conf'
       $config_file_owner    = 'telegraf'
